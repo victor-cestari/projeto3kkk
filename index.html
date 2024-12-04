@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard do 2°A kkk</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(22, 22, 48);
+            color: white;
+        }
+
+        .flashcard-container {
+            perspective: 1000px;
+        }
+
+        .flashcard {
+            width: 300px;
+            height: 500px;
+            text-align: center;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+            cursor: pointer;
+            margin: 50px;
+        }
+
+        .flashcard.flip {
+            transform: rotateY(540deg);
+        }
+
+        .flashcard .front,
+        .flashcard .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid #ffffff;
+            background-color: rgb(80, 97, 165);
+            box-shadow: 0 4px 8px rgb(110, 191, 245);
+            color: white;
+        }
+
+        .flashcard .back {
+            transform: rotateY(180deg);
+            background-color: #171a4a;
+            color: white;
+            font-size: 110%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+    </style>
+</head>
+<body>
+
+        <h1>Flashcard do 2°A</h1>
+
+
+    <div class="flashcard-container">
+        <div class="flashcard" onclick="this.classList.toggle('flip')">
+            <div class="front">
+                <h2>Qual é a matéria de Matemática 1?</h2>
+            </div>
+            <div class="back">
+                <h2>Empreendedorismo</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="flashcard-container">
+        <div class="flashcard" onclick="this.classList.toggle('flip')">
+            <div class="front">
+                <h2>Qual é a matéria de Matemática 2?</h2>
+            </div>
+            <div class="back">
+                <h2>Programação</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="flashcard-container">
+        <div class="flashcard" onclick="this.classList.toggle('flip')">
+            <div class="front">
+                <h2>Qual é a matéria de Física 1?</h2>
+            </div>
+            <div class="back">
+                <h2>Robótica</h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
